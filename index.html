@@ -3,145 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veritas Fan Page</title>
+    <title>Veritas Fanpage</title>
     <style>
         body {
-            background-color: #000;
-            color: #ff0000;
-            font-family: 'Verdana', sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: black;
+            color: red;
+            font-family: MS Gothic, sans-serif;
         }
-
         .container {
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
-            grid-gap: 10px;
-            padding: 10px;
+            gap: 10px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        .header, .left, .main, .right, .footer {
-            border: 2px solid #ff0000;
-            padding: 10px;
-        }
-
         .header {
-            grid-column: 1 / span 3;
             text-align: center;
+            grid-column: span 3;
             font-size: 48px;
-            font-family: 'Old English Text MT', 'Gothic', serif;
+            font-family: 'Old English Text MT', serif;
         }
-
-        .left, .right {
+        .left, .right, .middle {
+            border: 2px dotted red;
+            padding: 10px;
+        }
+        .left {
+            display: flex;
+            flex-direction: column;
+        }
+        .left a, .right a, .subheader {
+            font-family: 'Old English Text MT', serif;
+            font-size: 18px;
+            color: red;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin: 5px 0;
+        }
+        .subheader {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .middle {
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-
-        .left a, .right a {
-            color: #ff0000;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 5px 0;
+        .middle img, .right img, .left img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
         }
-
-        .marquee {
-            border: 2px solid #ff0000;
-            margin-bottom: 10px;
-            padding: 5px;
+        .moving-text-container {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            border-bottom: 1px dotted red;
+            margin-bottom: 20px;
         }
-
+        .moving-text {
+            font-size: 18px;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
         .footer {
-            grid-column: 1 / span 3;
             display: flex;
             justify-content: space-between;
+            margin-top: 20px;
+            grid-column: span 3;
+            align-items: flex-end;
         }
-
+        .scrollable-section {
+            overflow-y: auto;
+            max-height: 90px;
+            padding-top: 5px;
+        }
+        .guestbook {
+            border-top: 1px dotted red;
+            padding-top: 5px;
+        }
         .footer div {
             flex: 1;
+            margin: 0 10px;
             padding: 10px;
         }
-
-        .footer div:nth-child(2) {
-            text-align: right;
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .guestbook-entry {
+            padding: 5px 0;
+        }
+        .guestbook-entry .username {
+            font-weight: bold;
+        }
+        /* Separators */
+        .section {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="header">Veritas</div>
     <div class="container">
+        <div class="header">Veritas</div>
         <div class="left">
-            <div>
-                <img src="image-placeholder.png" alt="Band Image">
+            <div class="section" style="border-bottom: 1px dotted red;">
+                <img src="placeholder-image.png" alt="Band Image">
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
             </div>
-            <div>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                <a href="#">Link 4</a>
-                <a href="#">Link 5</a>
-                <a href="#">Link 6</a>
-            </div>
-            <div>
-                <span>Buttons!</span>
+            <div class="section">
+                <p class="subheader">Buttons!</p>
                 <div>
-                    <button>Button 1</button>
-                    <button>Button 2</button>
-                    <button>Button 3</button>
-                    <button>Button 4</button>
+                    <img src="placeholder-image.png" alt="Button">
+                    <img src="placeholder-image.png" alt="Button">
+                    <img src="placeholder-image.png" alt="Button">
+                    <img src="placeholder-image.png" alt="Button">
                 </div>
             </div>
         </div>
-        <div class="main">
-            <div class="marquee">
-                <marquee>Moving welcome message! - Moving welcome message! - Moving welcome message! -</marquee>
+        <div class="middle">
+            <div class="moving-text-container">
+                <div class="moving-text">Moving welcome message! - Moving welcome message! - Moving welcome message!</div>
             </div>
-            <div>
-                <img src="image-placeholder.png" alt="Main Image" style="width: 100%;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis lacus tellus, id interdum mi finibus vel. Nunc ac luctus risus. Etiam vel ex quis est aliquet egestas vitae id ex.</p>
+            <img src="placeholder-image.png" alt="Main Image">
+            <p  style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis lacus tellus, id interdum mi finibus vel...</p>
+            <div class="footer" style="border-top: 1px dotted red;">
+                <div>
+                    <p class="subheader">To-Do</p>
+                    <ul class="scrollable-section">
+                        <li>- Lorem ipsum dolor sit amet</li>
+                        <li>- Lorem ipsum dolor sit amet</li>
+                        <li>- Lorem ipsum dolor sit amet</li>
+                        <li>- Lorem ipsum dolor sit amet</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="subheader">Changelog</p>
+                    <ul class="scrollable-section">
+                        <li>0/0/0 - Lorem ipsum dolor sit amet</li>
+                        <li>0/0/0 - Lorem ipsum dolor sit amet</li>
+                        <li>0/0/0 - Lorem ipsum dolor sit amet</li>
+                        <li>0/0/0 - Lorem ipsum dolor sit amet</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="right">
-            <div>
-                <span>Featured Art!</span>
-                <img src="image-placeholder.png" alt="Featured Art">
+            <div class="section" style="border-bottom: 1px dotted red;">
+                <p class="subheader">Featured art!</p>
+                <img src="placeholder-image.png" alt="Featured Art">
             </div>
-            <div>
-                <span>Friends</span>
-                <div>
-                    <img src="image-placeholder.png" alt="Friend 1">
-                    <img src="image-placeholder.png" alt="Friend 2">
-                    <img src="image-placeholder.png" alt="Friend 3">
-                    <img src="image-placeholder.png" alt="Friend 4">
+            <div class="section">
+                <p class="subheader">Friends</p>
+                <img src="placeholder-image.png" alt="Friend">
+                <img src="placeholder-image.png" alt="Friend">
+                <img src="placeholder-image.png" alt="Friend">
+                <img src="placeholder-image.png" alt="Friend">
+            </div>
+            <div class="section guestbook">
+                <p class="subheader">Guestbook</p>
+                <div class="scrollable-section">
+                    <div class="guestbook-entry">
+                        <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
+                    </div>
+                    <div class="guestbook-entry">
+                        <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
+                    </div>
+                    <div class="guestbook-entry">
+                        <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
+                    </div>
                 </div>
             </div>
-            <div>
-                <span>Guestbook</span>
-                <div>
-                    <p>username - 01/01/2000 12:00 pm</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>username - 01/01/2000 12:00 pm</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div>
-            <span>To-Do</span>
-            <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-            </ul>
-        </div>
-        <div>
-            <span>Changelog</span>
-            <ul>
-                <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-                <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-                <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-            </ul>
         </div>
     </div>
 </body>
