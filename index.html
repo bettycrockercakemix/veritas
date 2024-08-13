@@ -5,14 +5,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Veritas Crypt</title>
       <style>
+         
          body {
          background-color: black;
          color: red;
          font-family: MS Gothic, sans-serif;
+         cursor: url('https://kiunlo.neocities.org/cursors/misc/raven2_cursor.png'), auto;
          }
          .container {
          display: grid;
-         grid-template-columns: 1fr 3fr 1fr;
+         grid-template-columns: 1fr 4fr;
          gap: 10px;
          padding: 10px;
          max-width: 1200px;
@@ -31,6 +33,7 @@
          .left {
          display: flex;
          flex-direction: column;
+         height:654px;
          }
          .left a, .right a, .subheader {
          font-family: 'Old English Text MT', serif;
@@ -51,10 +54,10 @@
          flex-direction: column;
          justify-content: space-between;
          }
-         .middle img, .right img, .left img {
+         .left img{
          display: block;
          margin: 0 auto;
-         width: 50%;
+         width: 76%;
          max-width: 300px;
          height: auto;
          }
@@ -64,21 +67,6 @@
          box-sizing: border-box;
          border-bottom: 1px dotted red;
          margin-bottom: 20px;
-         }
-         .moving-text {
-         font-size: 18px;
-         animation: marquee 20s linear infinite;
-         }
-         .friends-buttons {
-         text-align: center;
-         }
-         .friends-buttons img.button {
-         display: inline-block;
-         margin: 5px;
-         }
-         @keyframes marquee {
-         0% { transform: translateX(100%); }
-         100% { transform: translateX(-150%); }
          }
          .footer {
          display: flex;
@@ -92,141 +80,45 @@
          max-height: 90px;
          padding-top: 5px;
          }
-         .guestbook {
-         border-top: 1px dotted red;
-         padding-top: 5px;
-         }
-         .footer div {
-         flex: 1;
-         margin: 0 10px;
-         padding: 10px;
-         }
-         .footer ul {
-         list-style: none;
-         padding: 0;
-         margin: 0;
-         }
-         .guestbook-entry {
-         padding: 5px 0;
-         }
-         .guestbook-entry .username {
-         font-weight: bold;
-         }
          /* Separators */
          .section {
          margin-bottom: 20px;
          padding-bottom: 10px;
          }
          a:hover {
+         cursor: url('https://kiunlo.neocities.org/cursors/misc/raven2_cursor.png'), auto;
          color: #ff6666; /* Lighter shade of red */
          }
-         .friends-buttons {
-         text-align: center;
-         margin: 5px;
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         justify-items: center;
+         iframe {
+            width: 110%;
+            height:110%;
+            border: none;
+            margin: -8px;
+            
          }
-
       </style>
    </head>
+   
    <body>
       <div class="container">
          <div class="header">♱ The Veritas Crypt ♱</div>
          <div class="left">
             <div class="section" style="border-bottom: 1px dotted red;">
-                <img src="rose.png" alt="Rose">
-                <a href="index.html">Home</a>
-                <a href="about.html" target="content-frame">About</a>
-                <a href="history.html" target="content-frame">History</a>
-                <a href="archives.html" target="content-frame">Archives</a>
-                <a href="biographies.html" target="content-frame">Biographies</a>
-                <a href="devotions.html" target="content-frame">Devotions</a>
-                <a href="artgallery.html" target="content-frame">Art Gallery</a>
-                <a href="forum.html" target="content-frame">Forum</a>
+               <img src="rose.png" alt="Rose" style="width:50%;">
+               <a href="home.html" target="content-frame">Home</a>
+               <a href="about.html" target="content-frame">About</a>
+               <a href="history.html" target="content-frame">History</a>
+               <a href="archives.html" target="content-frame">Archives</a>
+               <a href="biographies.html" target="content-frame">Biographies</a>
+               <a href="devotions.html" target="content-frame">Devotions</a>
+               <a href="artgallery.html" target="content-frame">Art Gallery</a>
+               <a href="forum.html" target="content-frame">Forum</a>
             </div>
-            <div class="section">
-               <p class="subheader">Meh Collection</p>
-               <div>
-                  <img src="https://y2k.neocities.org/blinkiez/newbatch/damn_stupid.gif" alt="Blinkie">
-                  <img src="https://y2k.neocities.org/blinkiez/252731rd2czu7vk5.gif" alt="Blinkie">
-                  <img src="https://y2k.neocities.org/blinkiez/tumblr_p011es475W1w5gvx6o2_250.gif" alt="Blinkie">
-                  <img src="https://y2k.neocities.org/blinkiez/newbatch/bZWkxwk.gif" alt="Blinkie">
-                  <img src="https://y2k.neocities.org/blinkiez/tumblr_pa8n9hBrZF1xsbv6wo5_250.gif" alt="Blinkie">
-               </div>
-            </div>
+            
+      <p class="subheader">Featured art!</p>
+      <img src="romannn.png" alt="Featured Art" style="width: 100%">
          </div>
-         <div class="middle">
-            <div class="moving-text-container">
-               <div class="moving-text">Welcome to the best Veritas fanpage! ♡ Check out the forums ♡ Roman is bae ♡ </div>
-            </div>
-            <img src="placeholder-image.png" alt="Main Image">
-            <p  style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis lacus tellus, id interdum mi finibus vel...</p>
-            <p style="text-align: center;">⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘</p>
-            <p style="text-align: center;">Lolz!</p>
-            <div class="footer" style="border-top: 1px dotted red;">
-               <div>
-                  <p class="subheader">To-Do</p>
-                  <ul class="scrollable-section">
-                     <li>🗡 Lorem ipsum dolor sit amet</li>
-                     <li>🗡 Lorem ipsum dolor sit amet</li>
-                     <li>🗡 Lorem ipsum dolor sit amet</li>
-                     <li>🗡 Lorem ipsum dolor sit amet</li>
-                     <li>🗡 Lorem ipsum dolor sit amet</li>
-                     <li>🗡 Lorem ipsum dolor sit amet</li>
-                  </ul>
-               </div>
-               <div>
-                  <p class="subheader">Changelog</p>
-                  <ul class="scrollable-section">
-                     <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-                     <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-                     <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-                     <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-                     <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-                     <li>0/0/0 - Lorem ipsum dolor sit amet</li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-         <div class="right">
-            <div class="section" style="border-bottom: 1px dotted red;">
-               <p class="subheader">Featured art!</p>
-               <img src="romannn.png" alt="Featured Art" style="width: 80%">
-            </div>
-            <div class="section">
-               <p class="subheader">Friends</p>
-               <div class="friends-buttons">
-                   <img src="https://vampireboytoy.neocities.org/site%20buttons/basic%20button.gif" alt="A basic Neocities button" style="width:88px; height:31px;" class="button">
-                   <img src="https://vampireboytoy.neocities.org/site%20buttons/basic%20button.gif" alt="A basic Neocities button" style="width:88px; height:31px;" class="button">
-                   <img src="https://vampireboytoy.neocities.org/site%20buttons/basic%20button.gif" alt="A basic Neocities button" style="width:88px; height:31px;" class="button">
-                   <img src="https://vampireboytoy.neocities.org/site%20buttons/basic%20button.gif" alt="A basic Neocities button" style="width:88px; height:31px;" class="button">
-               </div>
-           </div>
-            <div class="section guestbook">
-               <p class="subheader">Guestbook</p>
-               <div class="scrollable-section" style="max-height:200px">
-                  <div class="guestbook-entry">
-                     <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
-                  </div>
-                  <div class="guestbook-entry">
-                     <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
-                  </div>
-                  <div class="guestbook-entry">
-                     <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
-                  </div>
-                  <div class="guestbook-entry">
-                     <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
-                  </div>
-                  <div class="guestbook-entry">
-                     <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
-                  </div>
-                  <div class="guestbook-entry">
-                     <span class="username">username</span> 08/10/2024 - Lorem ipsum dolor sit amet, consectetur adipiscing...
-                  </div>
-               </div>
-            </div>
-         </div>
+         <iframe name="content-frame" src="home.html"></iframe>
       </div>
    </body>
 </html>
