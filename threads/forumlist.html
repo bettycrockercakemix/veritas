@@ -6,7 +6,6 @@
       <title>Veritas Crypt</title>
       <style>
          body {
-         background-color: black;
          color: red;
          font-family: MS Gothic, sans-serif;
          cursor: url('https://kiunlo.neocities.org/cursors/misc/raven2_cursor.png'), auto;
@@ -48,6 +47,7 @@
          color: red;
          text-decoration: none;
          cursor: url('https://kiunlo.neocities.org/cursors/misc/raven2_cursor.png'), auto;
+         
          }
          .forum-header a:hover {
          text-decoration: underline;
@@ -74,45 +74,27 @@
          padding: 10px;
          border: 1px solid red;
          display: table-cell;
+         width: 2000px;
          vertical-align: middle; /* Ensures content within cells is centered vertically */
          }
-         .topic-cell {
-         width: 70%;
-         }
-         .replies-cell, .author-cell, .date-cell {
-         text-align: center;
-         }
-         .replies-cell {
-         width: 10%;
-         }
-         .author-cell {
-         width: 20%;
-         }
-         .date-cell {
-         width: 10%;
-         }
-         iframe {
-         background-color: transparent;
-         width: 100%;
-         height: 590px;
-         border: none;
-         overflow-y: hidden;
-         }
       </style>
-   </head>
    <body>
-      <div class="container">
-         <div class="header">
-            <h1 class="title">Veritas Crypt Forums</h1>
-            <div class="menu">
-               <a href="#">Log in</a> | 
-               <a href="#">Sign up</a> | 
-               <a href="#">Account</a>
-            </div>
+      <div class="forum-header">
+         <span>Welcome!</span>
+         <a href="#">New Topic</a></span>
+      </div>
+      <div class="forum-table">
+         <div class="forum-row">
+            <div class="forum-cell"><a href="generaltopics.html" target="forum-frame">News & Announcements</a></div>
          </div>
-         
-         <iframe name="forum-frame" src="threads\forumlist.html"></iframe>
-         
+         <div class="forum-row">
+            <div class="forum-cell"><a href="generaltopics.html" target="forum-frame">General</a></div>
+         </div>
+         <div class="forum-row">
+            <div class="forum-cell"><a href="generaltopics.html" target="forum-frame">Artist's Corner</a></div>
+         </div>
+         <div class="forum-row">
+            <div class="forum-cell"><a href="generaltopics.html" target="forum-frame">Off Topic</a></div>
+         </div>
       </div>
    </body>
-</html>
